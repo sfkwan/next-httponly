@@ -44,7 +44,7 @@ export default function Page() {
     <>
       <input
         name="search"
-        placeholder="Enter your search"
+        placeholder="Trigger API request in other domain"
         onChange={onInputChange}
       ></input>
       <p>Total product: {result ? result.total : 0}</p>
