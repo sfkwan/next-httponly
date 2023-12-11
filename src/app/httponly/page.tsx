@@ -30,11 +30,9 @@ export default function Page() {
     const { data } = await axios.get(
       // `https://dummyjson.com/products/search?q=${input}`
       `http://localhost:3010/cats/`,
-      { withCredentials: true,  }
+      { withCredentials: true }
     );
-
     setResult(data);
-
     console.log(data);
   };
 

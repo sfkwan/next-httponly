@@ -10,7 +10,7 @@ export default function Page() {
 
   useEffect(() => {
     const createCat = async () => {
-      const { data } = await axios.get(`http://localhost:3010/cats/890`, {
+      const { data } = await axios.get(`http://localhost:3010/login`, {
         withCredentials: true,
       });
 
