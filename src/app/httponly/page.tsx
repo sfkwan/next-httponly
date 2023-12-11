@@ -29,7 +29,7 @@ export default function Page() {
   const getUser = async (input: string) => {
     const { data } = await axios.get(
       // `https://dummyjson.com/products/search?q=${input}`
-      `http://localhost:3010/cats/`,
+      `https://prkwan.hktdc.com:3010/cats/`,
       { withCredentials: true }
     );
     setResult(data);
