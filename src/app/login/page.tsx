@@ -10,9 +10,12 @@ export default function Page() {
 
   useEffect(() => {
     const createCat = async () => {
-      const { data } = await axios.get(`https://prkwan.hktdc.com:3010/login`, {
-        withCredentials: true,
-      });
+      const { data } = await axios.get(
+        `https://api-prkwan.hktdc.com:3010/login`,
+        {
+          withCredentials: true,
+        }
+      );
 
       setResult(data);
 

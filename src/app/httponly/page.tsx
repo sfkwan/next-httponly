@@ -5,6 +5,7 @@ import axios from "axios";
 import { IProduct } from "./Iterface/IProduct";
 
 import { debounce } from "lodash";
+import Link from "next/link";
 
 export default function Page() {
   const [result, setResult] = useState<IProduct | undefined>(undefined);
@@ -29,7 +30,7 @@ export default function Page() {
   const getUser = async (input: string) => {
     const { data } = await axios.get(
       // `https://dummyjson.com/products/search?q=${input}`
-      `https://prkwan.hktdc.com:3010/cats/`,
+      `https://api-prkwan.hktdc.com:3010/cats/`,
       { withCredentials: true }
     );
     setResult(data);
@@ -48,6 +49,7 @@ export default function Page() {
         onChange={onInputChange}
       ></input>
       <p>Total product: {result ? result.total : 0}</p>
+      <Link href="/login">Back to Login</Link>
       <pre>{JSON.stringify(result, null, 2)}</pre>
     </>
   );
